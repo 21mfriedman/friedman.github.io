@@ -124,6 +124,39 @@ nav a:hover {
     height: auto;
 }
 
+.expandable-section .section-content {
+    display: none; /* Hidden by default */
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+/* Optional: Style for the section header */
+.expandable-section .section-header {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Change background when hovering over the header */
+.expandable-section .section-header:hover {
+    background-color: #ddd;
+}
+
+/* Optional: More styling for section content */
+.expandable-section .section-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.expandable-section .section-content ul li {
+    padding: 5px 0;
+}
+
 /* Design Posts Styles */
 .table {
     width: 100%;
