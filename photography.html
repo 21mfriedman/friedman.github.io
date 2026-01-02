@@ -26,25 +26,69 @@
     <div class="container">
         <div class="media-container">
             <div class="photos-grid horizontal">
-                <!-- Add photos -->
-                <img src="Images/Duckling.webp" alt="Duckling in Water">
-                <img src="Images/Gazelle.webp" alt="Gazelle Surrounded">
-                <img src="Images/Mother_Duck.webp" alt="Watching Over Ducklings">
-                <img src="Images/Lions.webp" alt="Two Lions">
-                <img src="Images/Hippo.webp" alt="Hippo Under Water">
-                <img src="Images/Flowers.webp" alt="Flowers in Fall">
+                <!-- photos -->
+                <div class="photo-item"><img src="Assets/Images/Duckling.webp" alt="Duckling in Water" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Gazelle.webp" alt="Gazelle Surrounded" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Mother_Duck.webp" alt="Watching Over Ducklings" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Lions.webp" alt="Two Lions" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Hippo.webp" alt="Hippo Under Water" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Flowers.webp" alt="Flowers in Fall" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Mountains_in_Austria.webp" alt="Mountains in Austria" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Mushrooms.webp" alt="Mushrooms on Mossy Wood Fence" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Nighttime_Lanterns_in_Water.webp" alt="Nighttime Lanters in Water" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Ocean.webp" alt="Ocean waves" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Jungle_Mountain_Peak.jpg" alt="Jungle Mountain Peak" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Last_Tree_Mallow.webp" alt="Last Tree Mallow" class="clickable-image"></div>
             </div>
             
             <div class="photos-grid vertical">
-                <!-- Add photos -->
-                <img src="Images/Dahlias.webp" alt="Dahlias">
-                <img src="Images/Dogwood.webp" alt="Dogwood Flowers">
-                <img src="Images/Plumerias.webp" alt="Fallen Plumeria Flowers">
-                <img src="Images/Peach_Flowers.webp" alt="Peach Flowers">
-                <img src="Images/Purple_Leaf_Plum.webp" alt="Purple Leaf Plum Flowers">
+                <!-- photos -->
+                <div class="photo-item"><img src="Assets/Images/Dahlias.webp" alt="Dahlias" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Dogwood.webp" alt="Dogwood Flowers" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Plumerias.webp" alt="Fallen Plumeria Flowers" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Peach_Flowers.webp" alt="Peach Flowers" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Purple_Leaf_Plum.webp" alt="Purple Leaf Plum Flowers" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Hibiscus.webp" alt="Dewy Hibiscus" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Gold_Dusk_Day_Gecko.png" alt="Gold Dusk Day Gecko" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Berries_in_Snow.webp" alt="Berries in Snow" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Succulent.webp" alt="Succulent in Stone" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Tower.webp" alt="Clock Tower Framed by Trees" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Mountain_Town.webp" alt="Mountain Town" class="clickable-image"></div>
+                <div class="photo-item"><img src="Assets/Images/Alleyway.jpeg" alt="Growing Alleyway" class="clickable-image"></div>
             </div>
         </div>
     </div>
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    <script>
+        var modal = document.getElementById("imageModal");
+        // Get the image and insert it inside the modal
+        var images = document.querySelectorAll(".clickable-image");
+        var modalImg = document.getElementById("modalImage");
 
+        images.forEach(function(image) {
+            image.onclick = function() {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            }
+        });
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Optional: Close modal if the user clicks anywhere outside of the modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
