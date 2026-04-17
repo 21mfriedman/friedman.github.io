@@ -57,10 +57,10 @@
                 <div class="photo-item"><img src="Assets/Images/Alleyway_2048.webp" alt="Growing Alleyway" class="clickable-image" loading="lazy" decoding="async"></div>
             </div>
         </div>
-    </div>
-    <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImage">
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
     </div>
     <script>
         var modal = document.getElementById("imageModal");
@@ -71,8 +71,7 @@
         images.forEach(function(image) {
             image.onclick = function() {
                 modal.style.display = "flex";
-                modalImg.src = "";
-                modalImg.src = this.dataset.full;
+                modalImg.src = this.src;
             }
         });
 
