@@ -52,6 +52,7 @@ header {
     position: sticky;
     top: 0;
     box-shadow: 0px 4px 5px rgba(73, 39, 74, 0.4);
+    z-index: 200;
 }
 
 header .container {
@@ -312,4 +313,98 @@ nav a:hover {
 
 .music-template h2 {
     margin-top: 0;
+}
+
+/* Nutrition head */
+
+#nutrition-app #table-container {
+    max-height: 80vh;
+    overflow: auto;
+    border: 1px solid #ccc;
+}
+.container-90 {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+#nutrition-app .nutrition-table {
+    min-width: 1400px;
+    border-collapse: separate; /* Essential for sticky positioning */
+    border-spacing: 0;
+}
+
+
+/* Vertical Sticky: All Header Cells */
+.nutrition-table thead th {
+    position: sticky;
+    background: #f2f2f2 !important;
+    z-index: 10; 
+    border-bottom: 2px solid #49274A;
+}
+
+/* Horizontal Sticky: First Column (Body & Header) */
+.nutrition-table .sticky-col {
+    position: sticky;
+    left: 0;
+    background: #fff;
+    z-index: 20; /* Higher than vertical-only headers */
+}
+
+.nutrition-table tbody td.sticky-col {
+    position: sticky;
+    left: 0;
+    background-color: #fff !important;
+    z-index: 5; /* Lower than any header */
+}
+
+/* The "Magic" Intersection: Top-Left Header Cell */
+.nutrition-table thead th.sticky-col {
+    left: 0;
+    z-index: 100 !important; 
+    background-color: #f2f2f2 !important;
+}
+
+.nutrition-table th,
+.nutrition-table td {
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+}
+
+/* Header Specifics */
+.header-row th {
+    height: 36px;
+    line-height: 1.2;
+    box-sizing: border-box; 
+    padding: 4px 8px;
+    vertical-align: middle;
+}
+
+.nutrition-table th.group {
+    background: #e6e6e6;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.nutrition-table th.group:hover {
+    background: #dcdcdc;
+}
+
+/* Column Alignment */
+.nutrition-table td {
+    text-align: right;
+}
+
+.nutrition-table td.name {
+    text-align: left;
+    font-weight: 600;
+}
+
+.nutrition-table tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.collapsed {
+    display: none;
 }

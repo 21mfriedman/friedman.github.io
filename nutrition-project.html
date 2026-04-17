@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Nutrition Explorer - LJ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <h1>Food Nutrition Explorer</h1>
+            <nav>
+                <ul>
+                    <li><a href="/friedman.github.io/index.html">Meet the Dev</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container-90">
+        <section id="intro">
+            <h2>How to use this tool</h2>
+            <p>
+                Eventually, there will also be a way for you to build your own "kitchen," 
+                and we can tell you the total amounts of each nutrient across all items, 
+                and identify places where you may be lacking or exceeding certain nutrients. 
+                It will also offer you substitutions or additions! But for now, enjoy exploring!
+                These data are taken from the USDA's Foundation Foods. Please note that not all 
+                nutritional values may be complete, and some data may be missing, inaccurate, or out-of-date.
+                Please take this as a general guide, rather than medical or professional nutritional advice. 
+            </p>
+        </section>
+        <div id="nutrition-app">
+            <!-- <input id="search" placeholder="Search food…" /> -->
+            <div id="table-container"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+<!-- Need to rewrite Python script to gather this data to account for energy being labeled as "Energy (Atwater Specific Factors)" -->
